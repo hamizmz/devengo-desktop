@@ -130,25 +130,71 @@ header .Buttons {
 
 footer {
 	position:absolute;
+	z-index:10;
 	top:100%;
 	transform:translate(0, -40pt);
 	
-	transition:transform 250ms ease-out 0s, background-color 250ms ease-out 0s;
+	transition:transform 250ms ease-out 0s,
+		background-color 250ms ease-out 0s,
+		z-index 0ms ease-out 250ms;
 }
 
 footer:hover {
+	z-index:30;
 	background-color:rgba(0, 0, 0, 0.72);
 	transform:translate(0, -100%);
+	
+	transition:transform 250ms ease-out 0s,
+		background-color 250ms ease-out 0s,
+		z-index 0ms ease-out 0ms;
+}
+
+footer:hover ul {
+	margin:8pt 0 0;
+}
+
+footer a {
+	color:#fff;
 }
 
 footer ul {
 	float:left;
 	width:28%;
+	margin:30pt 0 0;
+	padding:0 0 0 20pt;
+	line-height:1.75em;
+	list-style:none;
+	
+	transition:margin 250ms ease-out 0s;
+}
+
+footer ul:first-child {
+}
+
+footer ul:first-child a {
+	text-decoration:underline;
+}
+
+footer ul:first-child a:hover {
+	text-decoration:none;
+}
+
+
+footer ul label {
+	display:inline-block;
+	margin-right:10pt;
 }
 
 footer p {
 	float:right;
+	font-size:11pt;
 	width:33%;
+	margin:0 0 20pt;
+	text-align:justify;
+}
+
+footer p:first-child {
+	text-align:right;
 }
 
 article.Landing {
@@ -160,7 +206,11 @@ article.Landing {
 }
 
 .Cushion {
-	padding:10pt;
+	padding:12pt 12pt 16pt;
+}
+
+header .Cushion {
+	 padding-bottom:8pt;
 }
 
 .Cushion:after {
@@ -178,13 +228,17 @@ article.Landing {
 	width:100%;
 	height:100%;
 	overflow:hidden;
+	
+	color:#222;
 }
 
 .Slideshow nav {
 	position:absolute;
-	bottom:60pt;
+	bottom:32pt;
 	left:20pt;
 	list-style:none;
+	
+	z-index:20;
 	
 	padding:0;
 	margin:0;
@@ -192,23 +246,57 @@ article.Landing {
 
 .Slideshow nav li {
 	display:inline-block;
+	background-color:rgba(34, 34, 34, 0.62);
+	text-align:center;
+	padding:8pt;
+}
+
+.Slideshow nav li.Selected,
+.Slideshow nav li:hover {
+	background-color:cornflowerblue;
+}
+
+.Slideshow nav li a {
+	display:block;
+	color:#fff;
+	width:16pt;
+	height:16pt;
+}
+
+.Slideshow nav li:first-child a,
+.Slideshow nav li:last-child a {
+	color:#222;
+	width:auto;
+	height:auto;
+}
+
+.Slideshow nav li:first-child a:hover,
+.Slideshow nav li:last-child a:hover {
+	text-decoration:none;
+}
+
+.Slideshow nav li:first-child,
+.Slideshow nav li:last-child {
+	position:fixed;
+	top:50%;
+	
+	font-size:36pt;
+	font-size:8vh;
+	font-weight:bold;
+	
+	padding:0;
+	background-color:transparent;
 }
 
 .Slideshow nav li:first-child {
-	position:fixed;
-	top:50%;
 	left:20pt;
 }
 
 .Slideshow nav li:last-child {
-	position:fixed;
-	top:50%;
 	right:20pt;
 }
 
 .Presentation {
-	color:#fff;
-	text-shadow:2px 2px 0 rgba(0, 0, 0, 0.48);
 	position:absolute;
 	top:0;
 	left:0;
@@ -220,7 +308,7 @@ article.Landing {
 .Presentation article {
 	position:absolute;
 	top:0;
-	left:0;
+	left:100%;
 	width:100%;
 	height:100%;
 	z-index:2;
@@ -234,28 +322,27 @@ article.Landing {
 }
 
 .Presentation article h1 {
-	font-size:48pt;
-	font-size:8vh;
+	font-size:36pt;
 }
 
 .Presentation article ul {
 	font-size:28pt;
-	font-size:4vh;
+	font-size:2vw;
 	margin:30pt 0 0;
 	padding:0 0 0 80pt;
-	line-height:1.25em;
+	line-height:1em;
 	
 	width:67%;
 }
 
 .Presentation article button {
-	margin-left:80pt;
+	margin:10pt 0 0 80pt;
 	padding:8pt 10pt;
 	font-size:22pt;
 }
 
 .Presentation article ul li {
-	padding:0 0 30pt 0;
+	margin:0 0 20pt 0;
 }
 
 .Presentation article img {
@@ -263,9 +350,13 @@ article.Landing {
 	top:0;
 	left:0;
 	z-index:0;
+	
+	display:none;
 }
 
-
+article.Login, article.Register {
+	display:none;
+}
 
 
 

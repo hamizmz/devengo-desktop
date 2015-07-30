@@ -12,37 +12,42 @@ namespace('utils').DOM = (function dom(_doc) {
 		};
 	};
 	
+	function get_slides() {
+		var container = get_item('presentation');
+		return {
+			container: container,
+			all: container.getElementsByTagName('article')
+		};
+	};
+	
 	function get_slideshow() {
 		var container = get_item('slideshow');
 		return {
 			container: container,
 			nav: get_nav(container.getElementsByTagName('nav')[0]),
-			slides: container.getElementsByClassName('Slide')
+			slides: get_slides()
 		};
 	};
 	
-	function get_login(cancel) {
+	function get_login() {
 		return {
 			container: get_item('login'),
-			button: get_item('login_btn'),
-			cancel: cancel
+			button: get_item('login_btn')
 		};
 	};
 	
-	function get_register(cancel) {
+	function get_register() {
 		return {
 			container: get_item('register'),
-			button: get_item('register_btn'),
-			cancel: cancel
+			button: get_item('register_btn')
 		};
 	};
 	
 	function get_all() {
-		var cancel = get_item('cancel_btn');
 		return {
 			slideshow: get_slideshow(),
-			login: get_login(cancel),
-			register: get_register(cancel)
+			login: get_login(),
+			register: get_register()
 		};
 	};
 	

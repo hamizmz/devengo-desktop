@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1,user-scalable=no">
+		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+		<title>Devengo | Your Money. Right Now.</title>
+		
+		<link href="css/skeleton.css" rel="stylesheet" type="text/css" />
+		<link href="css/theme.css" rel="stylesheet" type="text/css" />
+		
+		<script type="text/javascript" src="js/lib/fetch.js"></script>
+		<script type="text/javascript" src="js/lib/namespace.js"></script>
+	</head>
+	<body>
+		<article class="Landing">
+			<header>
+				<div class="Cushion">
+					<hgroup>
+						<h1>Devengo</h1>
+						<h2>Your Money. Right Now.</h2>
+					</hgroup>
+			
+					<div class="Buttons">
+						<button>Login</button>
+						<button>Register</button>
+					</div>
+				</div>
+			</header>
+		
+			<section id="slideshow" class="Slideshow">
+				<nav>
+					<li><a href="#">&lt;</a></li>
+					
+					<li class="Selected"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				
+					<li><a href="#">&gt;</a></li>
+				</nav>
+				
+				<section id="presentation" class="Presentation">
+					<article>
+						<img style="height:100%" src="assets/slide_1.jpg" />
+						<section>
+							<h1>On-demand pay</h1>
+							<ul>
+								<li>Why do you have to wait for they pay that you've already earned?</li>
+								<li>Devengo allows you to access your wages as you earn them.</li>
+								<li>Improve your financial wellness by collecting your pay at anytime!</li>
+							</ul>
+							<button>Join Us!</button>
+						</section>
+					</article>
+					<article>
+						<img style="width:100%"" src="assets/slide_2.jpg" />
+						<section>
+							<h1>Socially responsible</h1>
+							<ul>
+								<li>At Devengo, our mission is to eliminate the 'bridging
+								the gap' stress felt while waiting for your next paycheck at
+								a fraction of the cost of the alternatives.</li>
+								<li>No longer accept the excessively high costs of payday
+								loans, bank overdrafts or late fees!</li>
+							</ul>
+							<button>Cash your hours</button>
+						</section>
+					</article>
+					<article>
+						<img style="width:100%"" src="assets/slide_3.jpg" />
+						<section>
+							<h1>Financial flexibility</h1>
+							<ul>
+								<li>Have a cell phone, cable, or utility bill due?</li>
+								<li>Need money for groceries, gas, public transit, or to fill
+								a prescription?</li>
+								<li>You shouldn't have to pay excessive fees or alter your
+								habits when you have already earned the money that you need.</li>
+							</ul>
+							<button>Customize your pay</button>
+						</section>
+					</article>
+				</section>
+				
+				<article class="Login">
+					<h2>Login</h2>
+					<form>
+						<label>Username</label><input id="usr_login" type="text" />
+						<label>Password</label><input id="pwd_login" type="password" />
+						<input type="submit" />
+					</form>
+					<hr />
+					<ul>
+						<li><button id="fb_login">Facebook Connect</button></li>
+						<li><button id="tw_login">Twitter Login</button></li>
+						<li><button id="yh_login">Yahoo! Login</button></li>
+						<li><button id="gl_login">Google Account</button></li>
+						<li><button id="oi_login">OpenID Account</button></li>
+					</ul>
+				<article>
+				
+				<article class="Register">
+					<h2>Register</h2>
+					<form>
+						<label>Username</label><input id="usr_login" type="text" />
+						<label>Password</label><input id="pwd_login" type="password" />
+						<input type="submit" />
+					</form>
+					<hr />
+					<ul>
+						<li><button id="fb_login">Facebook Connect</button></li>
+						<li><button id="tw_login">Twitter Login</button></li>
+						<li><button id="yh_login">Yahoo! Login</button></li>
+						<li><button id="gl_login">Google Account</button></li>
+						<li><button id="oi_login">OpenID Account</button></li>
+					</ul>
+				<article>
+			</section>
+		
+			<footer>
+				<div class="Cushion">
+					<ul>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact &amp; Support</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Police &amp; Terms of Use</a></li>
+					</ul>
+			
+					<ul>
+						<li>
+							<span>1-(XXX)-XXX-XXXX</span>
+						</li>
+						<li>
+							<span>info@devengo.org</span>
+						</li>
+						<li>
+							<span>@devengoinc</span>
+						</li>
+						<li>
+							<span>facebook.com/devengoinc</span>
+						</li>
+					</ul>
+					
+					<div class="Legal">
+						<p>&copy; 2015 - Devengo, INC. All rights reserved.</p>
+						<p>Aenean sit amet arcu velit. Maecenas tempus maximus massa sed mollis. Pellentesque ac libero rutrum, molestie est eu, bibendum neque. Donec blandit mi ac nulla faucibus, eget maximus lacus cursus. Integer laoreet elit non velit pretium ultrices. Etiam placerat eros magna, non rutrum orci sollicitudin et. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		
+		<script type="text/javascript">
+			fetch.dev_mode = true;
+			fetch('js/desktop.js', function() {
+				__main__();
+			});
+		</script>
+	</body>
+</html>

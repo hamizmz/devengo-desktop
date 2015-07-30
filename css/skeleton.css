@@ -36,14 +36,16 @@ body {
 	padding:0;
 }
 
-a {
+a,
+button,
+input[type=submit] {
 	color:cornflowerblue;
 	text-decoration:none;
 }
 
 a:hover,
 button:hover,
-input[type=submit] {
+input[type=submit]:hover {
 	text-decoration:underline;
 }
 
@@ -128,6 +130,10 @@ header .Buttons {
 	float:right;
 }
 
+#cancel_btn {
+	display:none;
+}
+
 footer {
 	position:absolute;
 	z-index:10;
@@ -159,7 +165,7 @@ footer a {
 
 footer ul {
 	float:left;
-	width:28%;
+	width:27%;
 	margin:30pt 0 0;
 	padding:0 0 0 20pt;
 	line-height:1.75em;
@@ -185,10 +191,13 @@ footer ul label {
 	margin-right:10pt;
 }
 
-footer p {
+footer .Legal {
 	float:right;
+	width:34%;
+}
+
+footer p {
 	font-size:11pt;
-	width:33%;
 	margin:0 0 20pt;
 	text-align:justify;
 }
@@ -280,8 +289,8 @@ header .Cushion {
 	position:fixed;
 	top:50%;
 	
-	font-size:48pt;
-	font-size:10vh;
+	font-size:36pt;
+	font-size:8vh;
 	font-weight:bold;
 	
 	padding:0;
@@ -296,66 +305,110 @@ header .Cushion {
 	right:20pt;
 }
 
-.Presentation {
+.Slideshow article {
 	position:absolute;
 	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	z-index:1;
-}
-
-.Presentation article {
-	position:absolute;
-	top:0;
-	left:0;
+	left:100%;
 	width:100%;
 	height:100%;
 	z-index:2;
 	background-color:#fff;
 }
 
-.Presentation article section {
+.Slideshow article section {
 	position:relative;
-	z-index:3;
 	padding:110pt 0 0 60pt;
 }
 
-.Presentation article h1 {
-	font-size:48pt;
+.Slideshow article h1 {
+	font-size:36pt;
 }
 
-.Presentation article ul {
+.Slideshow article ul {
 	font-size:28pt;
-	font-size:3vw;
+	font-size:2vw;
 	margin:30pt 0 0;
 	padding:0 0 0 80pt;
-	line-height:1.25em;
+	line-height:1em;
 	
 	width:67%;
 }
 
-.Presentation article button {
-	margin-left:80pt;
+.Slideshow article button {
+	margin:10pt 0 0 80pt;
 	padding:8pt 10pt;
 	font-size:22pt;
 }
 
-.Presentation article ul li {
-	padding:0 0 30pt 0;
+.Slideshow article ul li {
+	margin:0 0 20pt 0;
 }
 
-.Presentation article img {
+.Slideshow article .Backdrop {
 	position:absolute;
 	top:0;
 	left:0;
 	z-index:0;
 	
-	opacity:0.62;
+	width:100%;
+	height:100%;
+	
+	background-size:cover;
+	background-position:center center;
+	background-repeat:no-repeat;
+	
+	opacity:0.5;
 }
 
+.Slideshow article.Login ul,
+.Slideshow article.Register ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
 
+.Slideshow article.Login button,
+.Slideshow article.Register button {
+	margin:0;
+}
 
+.Field:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;
+}
+
+.Field form, .Field ul {
+	float:left;
+	width:42% !important;
+}
+
+.Field form {
+	text-align:right;
+	padding-right:4% !important;
+}
+
+.Field ul {
+	border-left:1px dotted #aeaeae;
+	text-align:left;
+	padding-left:4% !important;
+}
+
+form div {
+	margin-bottom:20pt;
+}
+
+form label {
+}
+
+form input[type=text],
+form input[type=password] {
+	font-size:13pt;
+	padding:6pt 8pt;
+	margin-left:16pt;
+}
 
 
 
